@@ -12,8 +12,11 @@ The following technologies are used:
 - 🖋 TypeScript
 - 🃏 Jest
 - 💅 Styled Components
+- 📦 Webpack (yes, this is the icon Parcel uses, sue me)
 
 The usage of these frameworks/libraries is probably overkill for very small extensions (but the DX is oh-so-good 😎).
+
+Note that since different browsers are at different stages and/or have different implementations of the Web Extension API, I highly suggest targeting one browser, and making the necessary tweaks to port to a different browser. 
 
 ## Getting Started
 
@@ -28,70 +31,85 @@ All other necessary development dependencies will be installed when you run `npm
 
 ### Installing
 
-1.  Clone the repository.
+1.  Clone or fork the repository.
 
 ```
-Give the example
+git clone https://github.com/rishispeets/webext-preact-typescript-starter
 ```
 
-And repeat
+2.  Install dependencies (from root).
 
 ```
-until finished
+npm install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+3.  Start the `Webpack` dev server.
+
+```
+npm run build
+```
+
+4.  Start the `web-ext` development environment in a new terminal. This should start up a new window of your default browser with the extension running.
+
+```
+cd extension &&
+web-ext run -v
+```
+
+Now you're able to make changes in the code that will be reflected in the running extension immediately. The Webpack development server takes care of the `Hot Module Reloading`, while the `web-ext` tool monitors the built code and reloads the extension whenever a changes has happened.
+
+**Build artifects are in `/extension/dist`, while static files are in `/extension`.**
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Tests can be created with Jest in `.ts` files in the `__tests__` folder. A simple example is included. The `preact-render-spy` package gives us a thin abstraction layer with which to test the Preact VDOM.
 
-### Break down into end to end tests
+Note: currently, no test coverage is collected, but this can easily be enabled in the Jest config.
 
-Explain what these tests test and why
+### Run unit tests
+
+1.  Execute Jest.
 
 ```
-Give an example
+npm run build
 ```
 
 ### And coding style tests
 
-Explain what these tests test and why
+Linting and formatting is done with TSLint and Prettier.
 
 ```
-Give an example
+npm run lint
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+When you're done with developing your extension, you can build the extension for distribution.
 
-## Built With
+```
+web-ext build
+```
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+The instructions for publishing your extension are different for Chrome, Firefox and others. The following links explain the process for Chrome and Firefox. 
+
+[Chrome](https://developer.chrome.com/webstore/publish)
+[Firefox](https://developer.mozilla.org/en-US/Add-ons/Distribution)
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+PRs and issues are welcome.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+This project uses [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License by Rishi Speets - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Preact project
+- TypeScript project
+- preact-boilerplate
+- TypeScript React starter
