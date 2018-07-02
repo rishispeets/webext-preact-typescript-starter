@@ -1,0 +1,6 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tslint.autoFixOnSave": false,
+  "tslint.enable": true,
+  "tslint.configFile": "tslint.json"
+}

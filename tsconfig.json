@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./extension/dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
+  },
+  "include": ["./src/**/*"]
+}
