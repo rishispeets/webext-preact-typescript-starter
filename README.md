@@ -92,8 +92,8 @@ web-ext build
 
 The instructions for publishing your extension are different for Chrome, Firefox and others. The following links explain the process for Chrome and Firefox. 
 
-[Chrome](https://developer.chrome.com/webstore/publish)
-[Firefox](https://developer.mozilla.org/en-US/Add-ons/Distribution)
+- [Chrome](https://developer.chrome.com/webstore/publish)
+- [Firefox](https://developer.mozilla.org/en-US/Add-ons/Distribution)
 
 ## Contributing
 
