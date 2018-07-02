@@ -12,7 +12,7 @@ The following technologies are used:
 - 🖋 TypeScript
 - 🃏 Jest
 - 💅 Styled Components
-- 📦 Webpack (yes, this is the icon Parcel uses, sue me)
+- 📦 Webpack (yes, this is the icon Parcel uses, I don't caaare)
 
 The usage of these frameworks/libraries is probably overkill for very small extensions (but the DX is oh-so-good 😎).
 
