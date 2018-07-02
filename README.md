@@ -105,7 +105,7 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 
 ## License
 
-This project is licensed under the MIT License by Rishi Speets - see the [LICENSE.md](LICENSE.md) file for details
+MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
