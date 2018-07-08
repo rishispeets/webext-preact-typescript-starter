@@ -2,7 +2,7 @@
 
 > Extensions can extend and modify the capability of a browser. Extensions for Firefox are built using the WebExtensions API, a cross-browser system for developing extensions. To a large extent the system is compatible with the extension API supported by Google Chrome and Opera and the W3C Draft Community Group. Extensions written for these browsers will in most cases run in Firefox or Microsoft Edge with just a few changes. - [MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
 
-Like the title has kind of given away, this is a simple starter template for Web Extensions. I've found Preact to be an exceptional fit for Web Extensions due to it's compact size, and small but adequate API.
+This is a simple starter template for Web Extensions. I've found Preact to be an exceptional fit for Web Extensions due to it's compact size, and small but adequate API.
 
 This starter does not include a state management library. If you would like a light weight solution, you can take a look at [preact-context](https://github.com/valotas/preact-context). Otherwise, a framework-agnostic one like [Redux](https://redux.js.org/) also works.
 
